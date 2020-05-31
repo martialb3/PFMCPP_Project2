@@ -16,13 +16,13 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
  
- 
- 
- 
- 
- 
- 
- 
+ integer                        int
+ boolean                        bool
+ character                      char
+ floating point                 float
+ double floating point          double
+ valueless                      void
+
  
  
  
@@ -51,17 +51,40 @@ video: Chapter 2 - Part 3
  6) click the [run] button.  Clear up any errors or warnings as best you can.
  */
 
+
+
 //2)
 void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
-    
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+
+int fingers = 5; 
+int deathToll = 35;
+int weaponType = 23;
+
+bool alibi = true;
+bool isThisADisease = false;
+bool soundOn = true;
+
+char country = 'M';
+char rootNote = 'A';
+char staffName = 'O';
+
+float speed = 123.4f;
+float zAngle = 34.007f;
+float timeElapsed = 1.0f;
+
+double percentage = 0.00078947;
+double pi = 3.14159265359;
+double randomNumber = 4534.094587354;
+
+ignoreUnused(number, fingers, deathToll, weaponType, alibi, isThisADisease, soundOn, country, rootNote, staffName, speed, zAngle, timeElapsed, percentage, pi, randomNumber);
+
 }
 /*
+
+
  10 functions
  example:
  */
@@ -73,43 +96,100 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 
 /*
  1)
- */
+*/
+
+int getInterval(int midiNote1, int midiNote2)
+{
+    ignoreUnused(midiNote1, midiNote2);
+    return {};
+}
 
 /*
  2)
  */
 
+bool getEvidence(bool alibi, bool motive, bool weapon) 
+{
+    ignoreUnused(alibi, motive, weapon); 
+    return {};
+}
+
 /*
  3)
  */
+
+void initSoundParameters(int volume, char wavetype, bool soundOn)
+{
+    ignoreUnused(volume, wavetype, soundOn); 
+}
 
 /*
  4)
  */
 
+double conditionalPercentage (int deathToll, int totalPopulation, bool isThisADisease)
+{
+    ignoreUnused(deathToll, totalPopulation, isThisADisease); 
+    return {};
+}
+
 /*
  5)
  */
+
+void dialNumber(char countryName, int phoneNumber)
+{
+    ignoreUnused(countryName, phoneNumber);
+}
 
 /*
  6)
  */
 
+int weaponStatus(int weaponType, bool weaponEngaged, int materialType, int intensitImpact, int iteration)
+{
+    ignoreUnused(weaponType, weaponEngaged, materialType, intensitImpact, iteration); 
+    return {};
+}
+
 /*
  7)
  */
+
+float getAltitude(int previousAltitude, float timeElapsed, double speed, double zAngle)
+{
+    ignoreUnused(previousAltitude, timeElapsed, speed, zAngle); 
+    return {};
+}
 
 /*
  8)
  */
 
+char getChordName(char rootName, int second, int third, int fourth, int fifth, int sixth, int seventh)
+{
+    ignoreUnused(rootName, second, third, fourth, fifth, sixth, seventh); 
+    return {};
+}
+
 /*
  9)
  */
 
+char evalTaste(int saltiness, int sweetness, int bitterness, int sourness, int savoury, int fat, int heatFactor, int astringent)
+{
+    ignoreUnused(saltiness, sweetness, bitterness, sourness, savoury, fat, heatFactor, astringent); 
+    return {};
+}
+
 /*
  10)
  */
+
+void explodeMusic(int measureStart, int measureStop, char staffName)
+{
+    ignoreUnused(measureStart, measureStop, staffName); 
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -131,27 +211,28 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    int interval = getInterval(100, 87);
     //2)
-    
+    auto suspect = getEvidence(false, true, true);    
     //3)
-    
+    initSoundParameters(100, 'S', false);
     //4)
-    
+    double diseaseDeathRate = conditionalPercentage (103000, 357000000, true);
     //5)
-    
+    dialNumber('F', 142399057);
     //6)
-    
+    auto weaponSound = weaponStatus(3, true, 22, 99, 5);
     //7)
-    
+    auto currentAltitude = getAltitude(929, 1.5, 163.2, -15.02);
     //8)
-    
+    auto thatChordName = getChordName('D', 0, 2, 0, 1, 2, 0);
     //9)
-    
+    auto tastingExperience = evalTaste(3, 0, 7, 2, 0, 4, -3, 9);
     //10)
-    
-    
-    ignoreUnused(carRented);
+    explodeMusic(30, 38, 'P');
+
+    ignoreUnused(carRented, interval, suspect, diseaseDeathRate, weaponSound, currentAltitude, thatChordName, tastingExperience);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
