@@ -59,27 +59,27 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
 
-int fingers = 5; 
-int deathToll = 35;
-int weaponType = 23;
+    int fingers = 5; 
+    int deathToll = 35;
+    int weaponType = 23;
 
-bool alibi = true;
-bool isThisADisease = false;
-bool soundOn = true;
+    bool alibi = true;
+    bool isThisADisease = false;
+    bool soundOn = true;
 
-char country = 'M';
-char rootNote = 'A';
-char staffName = 'O';
+    char country = 'M';
+    char rootNote = 'A';
+    char staffName = 'O';
 
-float speed = 123.4f;
-float zAngle = 34.007f;
-float timeElapsed = 1.0f;
+    float speed = 123.4f;
+    float zAngle = 34.007f;
+    float timeElapsed = 1.0f;
 
-double percentage = 0.00078947;
-double pi = 3.14159265359;
-double randomNumber = 4534.094587354;
+    double percentage = 0.00078947;
+    double pi = 3.14159265359;
+    double randomNumber = 4534.094587354;
 
-ignoreUnused(number, fingers, deathToll, weaponType, alibi, isThisADisease, soundOn, country, rootNote, staffName, speed, zAngle, timeElapsed, percentage, pi, randomNumber);
+    ignoreUnused(number, fingers, deathToll, weaponType, alibi, isThisADisease, soundOn, country, rootNote, staffName, speed, zAngle, timeElapsed, percentage, pi, randomNumber);
 
 }
 /*
